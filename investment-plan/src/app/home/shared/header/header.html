@@ -1,0 +1,37 @@
+<mat-toolbar color="primary" class="header-toolbar">
+  <span class="app-title">Investment Plan</span>
+  
+  <ng-container *ngIf="authService.isAuthenticated()">
+    <nav mat-tab-nav-bar [tabPanel]="tabPanel">
+      <a mat-tab-link
+         routerLink="/investment"
+         routerLinkActive #rla="routerLinkActive"
+         [active]="rla.isActive">
+        Investment
+      </a>
+      <a mat-tab-link
+         routerLink="/loan"
+         routerLinkActive #rla2="routerLinkActive"
+         [active]="rla2.isActive">
+        Loan
+      </a>
+    </nav>
+    <mat-tab-nav-panel #tabPanel></mat-tab-nav-panel>
+
+    <span class="spacer"></span>
+    
+    <div class="user-section">
+      <button mat-button [matMenuTriggerFor]="userMenu">
+        <mat-icon>person</mat-icon>
+        {{ authService.getCurrentUserId() }}
+      </button>
+      
+      <mat-menu #userMenu="matMenu">
+        <button mat-menu-item (click)="onLogout()">
+          <mat-icon>exit_to_app</mat-icon>
+          <span>Sign Out</span>
+        </button>
+      </mat-menu>
+    </div>
+  </ng-container>
+</mat-toolbar>

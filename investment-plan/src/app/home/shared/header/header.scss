@@ -1,0 +1,34 @@
+.header-toolbar {
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  //background: linear-gradient(135deg, #7eb7f0 0%, #1565c0 100%);  // Rich blue gradient
+  background: linear-gradient(135deg, #2196f3 0%, #44d0eb 100%);
+
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.app-title {
+  font-size: 20px;
+  font-weight: 500;
+  margin-right: 32px;
+}
+
+.nav-tabs {
+  flex: 1;
+  max-width: 300px;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.user-section {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  .mat-icon {
+    margin-right: 4px;
+  }
+}

@@ -1,0 +1,106 @@
+<div class="investment-container">
+  <mat-card class="main-card">
+    <mat-card-header>
+      <mat-card-title>Take Loan, But Assured Your Investment Plan</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+      <form [formGroup]="loanForm" class="loan-form">
+        <div class="form-row">
+          <mat-form-field>
+            <mat-label>Loan Amount</mat-label>
+            <input matInput type="number" formControlName="loanAmount">
+            <mat-hint>Enter the loan amount you need</mat-hint>
+          </mat-form-field>
+        </div>
+
+        <div class="form-row">
+          <mat-form-field>
+            <mat-label>Interest Rate (%)</mat-label>
+            <input matInput type="number" formControlName="interestRate">
+            <mat-hint>Annual interest rate</mat-hint>
+          </mat-form-field>
+        </div>
+
+        <div class="form-row">
+          <mat-form-field>
+            <mat-label>Tenure (Years)</mat-label>
+            <input matInput type="number" formControlName="tenure">
+            <mat-hint>Loan duration in years</mat-hint>
+          </mat-form-field>
+        </div>
+      </form>
+
+      <!-- Loan Calculation Results -->
+      <div class="results-section">
+        <h3>Loan Details</h3>
+        <div class="calculation-grid">
+          <div class="calc-item">
+            <span class="label">Principal Amount:</span>
+            <span class="value">₹{{ loanCalculation.principalAmount | number:'1.0-0' }}</span>
+          </div>
+          <div class="calc-item">
+            <span class="label">Monthly EMI:</span>
+            <span class="value">₹{{ loanCalculation.emi | number:'1.0-0' }}</span>
+          </div>
+          <div class="calc-item">
+            <span class="label">Interest Amount:</span>
+            <span class="value">₹{{ loanCalculation.interestAmount | number:'1.0-0' }}</span>
+          </div>
+          <div class="calc-item total">
+            <span class="label">Total Amount:</span>
+            <span class="value">₹{{ loanCalculation.totalAmount | number:'1.0-0' }}</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- FD Investment Plan One Time -->
+      <div class="results-section">
+        <h3>Required Fixed Deposit Investment In One Time (6.5% p.a.)</h3>
+        <div class="calculation-grid">
+          
+          <div class="calc-item">
+            <span class="label">Total Investment:</span>
+            <span class="value">₹{{ fdInvestment.totalInvestment | number:'1.0-0' }}</span>
+          </div>
+          <div class="calc-item total">
+            <span class="label">Maturity Amount:</span>
+            <span class="value">₹{{ fdInvestment.maturityAmount | number:'1.0-0' }}</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- FD Investment Plan Every Year -->
+      <div class="results-section">
+        <h3>Required Fixed Deposit Investment Every Year (6.5% p.a.)</h3>
+        <div class="calculation-grid">
+          
+          <div class="calc-item">
+            <span class="label">Total Investment Yearly:</span>
+            <span class="value">₹{{ fdAnnualInvestment.totalInvestment | number:'1.0-0' }}</span>
+          </div>
+          <div class="calc-item total">
+            <span class="label">Maturity Amount:</span>
+            <span class="value">₹{{ fdAnnualInvestment.maturityAmount | number:'1.0-0' }}</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- RD Investment Plan Every Month -->
+      <div class="results-section">
+        <h3>Required Recurring Deposit Investment Every Month (6.5% p.a.)</h3>
+        <div class="calculation-grid">
+          
+          <div class="calc-item">
+            <span class="label">Total Investment Monthly:</span>
+            <span class="value">₹{{ monthlyInvestment.totalInvestment | number:'1.0-0' }}</span>
+          </div>
+          <div class="calc-item total">
+            <span class="label">Maturity Amount:</span>
+            <span class="value">₹{{ monthlyInvestment.maturityAmount | number:'1.0-0' }}</span>
+          </div>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

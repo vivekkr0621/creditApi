@@ -1,0 +1,5 @@
+Use Below Step Before Running EF
+
+1. Delete Migrations Folder - Otherwise it increase the size of the DB
+2. Run Command: dotnet ef migrations add InitialCreate
+3. Run Command: dotnet ef database update
