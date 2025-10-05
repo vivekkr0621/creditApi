@@ -1,0 +1,17 @@
+api deployment
+https://www.smarterasp.net/
+username - intapi549
+email - biyehex549@aupvs.com
+password - intApi@12345
+
+hosting plan
+server location - United States (Las Vegas)
+hosting account id - intapi549-001
+password - intApi@12345
+
+
+
+FTP Address:	win1020.site4now.net
+FTP Login ID:	intapi549-001 
+DNS Servers:	NS1.SITE4NOW.NET NS2.SITE4NOW.NET NS3.SITE4NOW.NET
+IP Address:	204.188.228.20
