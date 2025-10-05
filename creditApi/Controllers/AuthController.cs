@@ -37,5 +37,6 @@ namespace creditApi.Controllers
             bool result = _authService.Login(siginRequest);
             return Ok(result);
         }
+
     }
 }
